@@ -1,9 +1,19 @@
-import React, {Component, useState} from "react";
+import React, { useState} from "react";
 import '../styles/App.css';
+import Form from "./Form";
+import Welcome from "./Welcome";
 
 const App = () => {
+const [formValues,setFormvalues]= useState([])
+  const getValues=(data)=>{
+    setFormvalues(data.filter(item => item.hasOwnProperty("email")))
+
+  }
   return (
-    <div id="main"></div>
+    <div id="main">
+      <Form getValues={getValues}/>
+      <Welcome name={formValues[0]}/>
+    </div>
   )
 }
 
