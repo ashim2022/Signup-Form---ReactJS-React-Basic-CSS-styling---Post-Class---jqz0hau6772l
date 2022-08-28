@@ -1,9 +1,10 @@
 import React from "react";
-function Welcome({name}){
-    console.log(name)
+function Welcome({formValues}){
+    console.log(formValues)
+    const {email,name, phone, password, gender}=formValues
     return(
         <div>
-           {name && <p>hello {name.email.split('@')[0]}</p>}
+           {email && <p>hello {email.split('@')[0]}</p>}
         </div>
         
     );
