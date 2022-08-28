@@ -29,13 +29,7 @@ function Form({getValues=()=>{}}) {
     else if(emailError){
       setEmailError(false)
     }
-    // if(!phone.match ([1-9]\d{2}\s\d{3}\s\d{4})){
-    //   setPhoneError(true)
-    //   return;
-    // }
-    // else if(phoneError){
-    //   setPhoneError(false)
-    // }
+
     if(pass.length<6){
       setPasswordError(true)
       return;
