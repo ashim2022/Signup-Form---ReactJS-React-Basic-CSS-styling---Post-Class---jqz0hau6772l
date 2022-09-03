@@ -11,7 +11,7 @@ const [formValues,setFormvalues]= useState({})
 
   }
   return (
-    <div id="main">
+    <div id="main" className="body">
       <Form getValues={getValues}/>
       <Welcome formValues={formValues}/>
     </div>
